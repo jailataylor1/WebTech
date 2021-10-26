@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about Jaila</title>
+    <script>
+       var c1 = red;
+       var c2 = orange;
+       var c3 = yellow;
+        var c4 = green;
+       var c5 = blue;
+        var c6 = indigo;
+         var c7 = violet;
+        function changeColor() {
+            var myH1 = document.getElementById("h");
+            if (myH1.style.color == "red") myH1.style.color = "orange";
+            else if (myH1.style.color == "orange") myH1.style.color = "yellow";
+            else if (myH1.style.color == "yellow") myH1.style.color = "green";
+            else if (myH1.style.color == "green") myH1.style.color = "blue";
+            else if (myH1.style.color == "blue") myH1.style.color = "indigo";
+            else if (myH1.style.color == "indigo") myH1.style.color = "violet";
+            else if (myH1.style.color == "violet") myH1.style.color = "red";
+            else myH1.style.color = "red";
+            setTimeout("changeColor()", 500);
+        }
+    </script>
+    </head>
+    <style> 
+    body {border-width: 20px; height: 20px; padding-top: 20px; padding-right: 25px; padding-bottom: 30px; padding-left: 25px; border-style: dashed; border-color: floralwhite;}
+
+    body {background-color:cornflowerblue} 
+
+    h1 {text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 30pt; margin: auto; border-color:floralwhite; }
+
+    p {text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 18pt}
+
+    img {display: block;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border-color: floralwhite; border-style: dashed; cursor: grab;}
+
+    h1 {float: left;}
+    
+
+    </style>
+<body>
+  <h1 id="h" style="color:red">Jaila Taylor</h1>
+<p><button onclick="changeColor()">Start animation</button></p>
+
+    <img src="pictureofjaila.jpg"   alt="Image of Jaila" width="250" class="center"/>
+    <p> My name is Jaila, I am from Brooklyn NY! <br>
+    <span style="color:cornsilk"> 
+        You can reach me in Brooklyn by taking the A or C train to the Utica train station </span> </p>
+    <p><a href="interests.html">Click here to learn about my interests</a></p>
+</body>
+</html>
