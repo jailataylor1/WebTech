@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<title>art</title>
+	
+<script>
+	var ctx;
+	var d = true;
+	function drawShape() {
+		// get the canvas element using the DOM
+		var canvas = document.getElementById('tutorial');
+		// fill the page with the canvas
+		canvas.width = 900;
+		canvas.height = 900;
+		// use getContext to use the canvas for drawing
+		ctx = canvas.getContext('2d');
+		colorList = new Array("pink", "purple", "magenta", "red", "purple")
+		canvasAnimate();
+	}
+
+	function canvasAnimate() {
+		if (d == true) {
+			ctx.fillStyle = colorList[Math.floor(Math.random() * colorList.length)]
+			rand1 = Math.floor(Math.random() * 850);
+			rand2 = Math.floor(Math.random() * 850);
+			ctx.fillRect(rand1, rand2, 50, 50);
+			d = false;
+		}
+		else {
+			rand1 = Math.floor(Math.random() * 850)
+			rand2 = Math.floor(Math.random() * 850)
+			ctx.clearRect(rand1, rand2, 50, 50)
+			d = true;
+		}
+		setTimeout("canvasAnimate()", 200);
+	}
+</script>
+	
+</head>
+<body
+
+
+	onclick="drawShape()"
+	
+	data-new-gr-c-s-check-loaded="14.1036.0"
+	data-gr-ext-installed="">
+	<button style="position:absolute; top:350px; left:300px"> click to draw colorful squares </button>
+	<canvas
+		id="tutorial"
+		width="900"
+		height="900"></canvas>
+<h1 style="font-family: 'Times New Roman', Times, serif; color: red; border: thistle; position: absolute; top: 300px; left: 300px;"> Valentines Day Squares </h1>
+
+</body>
+	
+
+</html>
