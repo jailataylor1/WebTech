@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta
+        http-equiv="content-type"
+        content="text/html; charset=utf-8" />
+    <title>session
+        19 activity
+    </title>
+
+    <script>
+        var curDate = new Date();
+
+        function calcbd() {
+            var m = document.getElementById("mo").value - 1;
+            var d = document.getElementById("day").value;
+            var y = document.getElementById("year").value;
+
+            var birthday = new Date(y, m, d)
+            var dif = curDate - birthday
+
+            dif = dif / (31556952000)
+            dif = Math.floor(dif);
+
+            document.getElementById("answer").innerHTML = dif
+        }
+
+        function setCookie(cName, cValue) {
+            //Get today's date
+            var today = new Date()
+
+            //Create a date 1 year from now
+            var expireDate =
+                new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
+
+            //Create a new cookie that expires a year from now
+            document.cookie = cName + "=" + cValue +
+                ";expires=" + expireDate.toGMTString()
+        }
+
+        function checkingCookie() {
+            var lastone = readCookies("lastVisit");
+            if (last == null) {
+                document.getElementById("stuff").innerHTML = "First Visit"
+            }
+            else alert(readCookies("lastVisit"))
+            var now = new Date()
+            setCookie("lastVisit", now.toString())
+        }
+
+    </script>
+
+</head>
+
+<body
+    onload="checkingCookie()">
+    <p id="stuff">
+        Enter your
+        birthday
+        below
+    </p>
+
+    <p>
+        Month <input
+            type="text"
+            name="mo"
+            id="mo"
+            size="2" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+        Day <input
+            type="text"
+            name="day"
+            id="day"
+            size="2" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+        Year <input
+            type="text"
+            name="year"
+            id="year"
+            size="2" />
+    </p>
+
+    <p><button
+            type="button"
+            onclick="calcbd()">Calculate</button>
+    </p>
+
+    <p>I am <span
+            id="answer"></span>
+        years old.
+    </p>
+</body>
+
+
+</html>
