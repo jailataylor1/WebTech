@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>\index</title>
+
+	<style>
+	/* Your styles go here */
+	
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+.pink {
+	background-color: palevioletred;
+}
+	</style>
+	
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script>
+	$(function(){
+	   // jQuery methods go here...
+			$("#button1").click(function(){
+			$("tr:odd").hide();
+			})
+
+			$("tr").click(function () {
+			$("tr").fadeOut("3000");
+		})
+		$("#flip").click(function () {
+			$("#panel").slideDown();
+			$("p").addClass("pink");
+		})
+			$("#button2show").click(function () {
+			$("tr:odd").show();
+			$("tr:even").show();
+			$("tr:odd").css("background-color", "yellow");
+		})
+	
+			$("#btn3").click(function () {
+				alert("Text: " + $("#test").text());
+				 $("p").append(" <b>Appended text</b>.")
+				 $("p").after("<p>This is an added paragraph</p>")
+			
+			})
+			$("#btn4").click(function () {
+				alert("HTML: " + $("#test").html());
+			})
+			 $("button").click(function () {
+			$("#box1").animate({ left: '250px' });
+		})
+
+		  $("#btn5").click(function () {
+			$("#div1").delay("slow").fadeIn();
+			$("#div2").delay("fast").fadeIn();
+			})
+	
+	});
+	/* Your additional JavaScript goes here */
+	</script>
+
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<table>
+		<tr> <td>#0 </td> <td> part 2 </td></tr>
+		<tr> <td>#1 </td> <td> part 2 </td></tr>
+		<tr> <td>#2 </td> <td> part 2 </td></tr>
+		<tr> <td>#3 </td> <td> part 2 </td></tr>
+	</table>
+	<button id="button1">hide odd</button> <button id="button2show">show all</button> 
+
+	<div id="flip">click to slide down</div>
+	<div id="panel">Hello world!</div>
+
+	<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn3">Show Text</button>
+<button id="btn4">Show HTML</button>
+
+<button>Start
+	Animation</button>
+
+
+<div
+	style="background:pink;height:100px;width:100px;position:absolute;" id="box1">
+</div>
+
+<button id="btn5">Click to 	fade in boxeswith a delay </button>
+
+<div id="div1" style="width:90px;height:90px;display:none;background-color:black;"></div><br>
+<div id="div2" style="width:90px;height:90px;display:none;background-color:green;"></div><br>
+
+</body>
+   
+</html>
