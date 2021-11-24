@@ -97,6 +97,13 @@
             font-weight: bolder;
         }
 
+         .subnav .subnavbtn a {
+
+        padding:0px;
+
+        }
+
+
 
         .subnav-content {
             display: none;
@@ -190,6 +197,27 @@
     bottom: 0; left: 0;
     margin: auto; margin-bottom: 10px;}
     </style>
+        <script
+            src="https://code.jquery.com/jquery.min.js"></script>
+        <script>
+            $(function () {
+                // jQuery methods go here...
+                $("#button1").click(function () {
+                    $("tr:odd").hide();
+                })
+
+                $("tr").click(function () {
+                    $("tr").fadeOut("3000");
+                })
+
+                $("#button2show").click(function () {
+                    $("tr:odd").show();
+                    $("tr:even").show();
+                    $("tr:odd").css("background-color", "rgb(182,215,168)");
+                })
+
+            });
+            </script>
 
 <body>
     <h1> <span>
@@ -207,8 +235,9 @@
         <div
             class="subnav">
             <button
-                class="subnavbtn">Complexion
-                Apparel
+                class="subnavbtn"> <a
+                    href="complexionapparel1.htm">Complexion
+                Apparel </a>
                 <i
                     class="fa fa-caret-down"></i></button>
             <div
@@ -230,8 +259,8 @@
         <div
             class="subnav">
             <button
-                class="subnavbtn">
-                Travel
+                class="subnavbtn"> <a  href="travel.html">
+                Travel </a>
                 <i
                     class="fa fa-caret-down"></i></button>
             <div
@@ -251,8 +280,8 @@
         <div
             class="subnav">
             <button
-                class="subnavbtn">
-                Lifestyle
+                class="subnavbtn"> <a href="lifestyle.html">
+                Lifestyle </a>
                 <i
                     class="fa fa-caret-down"></i></button>
             <div
@@ -519,11 +548,13 @@ London has always been an innovator of art and culture. Grab you bags and your w
                         </tr>
             </tbody>
         </table>
+        	<button id="button1" style="float: right; background-color: transparent;">hide odd</button> <button id="button2show" style="float: right; background-color: transparent;">show all</button>
     </div>
     </div>
     </div>
     
-    <h2 style="text-align: center;">Virtual Tour of London </h2>
+    <div style="align-content: center;">
+    <h2 style="text-align: center; padding-top: 25pt;">Virtual Tour of London </h2>
 
     <div class="align">  
         <iframe width="560"
@@ -532,6 +563,7 @@ London has always been an innovator of art and culture. Grab you bags and your w
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+    </div>
     </div>
     <br>
     <br>

@@ -195,8 +195,24 @@
     margin-bottom: 10pt;
     margin-left: 50pt;
     margin-right: 20pt}
+
+    .a {color:navy}
+	.b {color:rgb(138, 161, 197)}
     </style>
+    <script
+        src="http://code.jquery.com/jquery.min.js"></script>
 <script>
+    	$(function(){
+	   // jQuery methods go here...
+
+		$("p").mouseover(function(){
+			$(this).css("border", "3px dotted blue")
+		})
+		$("p").mouseout(function () {
+			$(this).css("border", "none")
+		})
+	});
+	/* Your additional JavaScript goes here */
     function chgstyle() {
         document.getElementById("handsew").style.backgroundColor = " rgb(138,161,197)";
         document.getElementById("handsew").innerHTML = "Let's Learn How to Sew!"
@@ -204,6 +220,24 @@
     function chgimg() {
         document.getElementById("sewingimg").src = "sewing2.jpg"
     }
+     function rand() {
+
+            var wrds = document.getElementById("materials")
+
+            var types = new Array("Fabric Scissors", "Rotary Cutter", "Laser Cutter" )
+            wrds.innerHTML = types[Math.floor(Math.random() * 3)]
+        }
+    
+    function changecolor(){
+        var wrd2 = document.getElementById("heading");
+        if ( wrd2.style.color == "brown") wrd2.style.color= " rgb(138,161,197)";
+        else wrd2.style.color="brown";
+        setTimeout("changecolor()", 500);
+    
+    }
+   
+
+	
 </script>
 <body>
     <h1> <span>
@@ -299,10 +333,10 @@
                         alt="Image of Hand Sewing Needle"
                         class="center"></a>
             </span>
-     <p>
+     <p class="a">
          Have you ever wanted to learn how to sew but you don’t have access to a sewing machine? Are you curious about the process of mending a hole in your pants or hemming your skirt? Within this training you will learn several introductory hand-sewing techniques with a variety of simple hand-sewing tools and materials as well as how to upcycle and mend clothes you already have access to! 
      </p>   
-     <p>
+     <p class="b">
          It is important to note that Hand Sewing Needles, Seam Rippers, Fabric Scissors, and Straight Pins are SHARP tools, even if they do not feel it. You should always follow appropriate blade safety (putting the blade away while not actively cutting, cutting away from you, using a cutting mat, etc) while using them. 
      </p>    
 <h2 style="color: #CBB99B; font-size: 24pt; margin-left: 45px;">
@@ -317,17 +351,17 @@
             class="list">
             <div>
                 <ul>
-                    <li>1-2 Hand Sewing Needles
+                    <li class="a" >1-2 Hand Sewing Needles
                     </li>
-                    <li>Fabric Scissors
+                    <li id="materials" onmouseover="rand()" class="a">Fabric Scissors
                         
                     </li>
-                    <li>Seam Ripper
+                    <li class="b">Seam Ripper
                         
                     </li>
-                    <li>Straight Pins
+                    <li class="b">Straight Pins
                     </li>
-                    <li>
+                    <li class="b">
                         Needle Threader
                     </li>
                 </ul>
@@ -336,20 +370,20 @@
         <div
             class="list">
             <div>
-                <ul>
-                    <li>Fabric Markers 
+                <ul id="list1">
+                    <li class="a">Fabric Markers 
                         
                     </li>
-                    <li>One large Piece of Fabric 
+                    <li class="a">One large Piece of Fabric 
                         
                     </li>
-                    <li>2 Buttons
+                    <li class="b">2 Buttons
                         
                     </li>
-                    <li>Thread
+                    <li class="b">Thread
                         
                     </li> 
-                    <li>Ruler/Measuring Tape
+                    <li class="b">Ruler/Measuring Tape
                         
                     </li>
                     
@@ -370,9 +404,9 @@
     </div>
 
      <h2
-        style="color: #CBB99B; font-size: 24pt; margin-left: 45px;">
+        style="color: brown; font-size: 24pt; margin-left: 45px;" id="heading" onclick="changecolor()"> 
         Sew a Basting/Running Stitch </h2>
-        
+   
     <div class="dontwrapdiv" style="margin-bottom: 10px;">
     <div class="rect6"></div>
     <p style= "font-size: 16pt; margin-right: 70px; text-align: justify;"> This is a very simple stitch. It is used to join fabric in the seams. Also used for gathering fabric. It is made up of a straight line of stitches of equal length. Also used in embroidery as an outlining and filling stitch.
