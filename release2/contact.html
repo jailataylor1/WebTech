@@ -70,7 +70,9 @@
         .navbar {
             overflow: hidden;
             background-color: transparent;
-            padding-left: 33.5%;
+            align-self: center;
+            padding-right: 30%;
+            padding-left: 30%;
             font-family: "bodytext-1";
         }
 
@@ -102,6 +104,11 @@
             font-weight: bolder;
         }
 
+          .subnav .subnavbtn a {
+
+        padding:0px;
+
+        }
 
         .subnav-content {
             display: none;
@@ -155,7 +162,27 @@
 	/* Your styles go here */
     
     </style>
+<script>
+    	function processForm() {
+                if (document.getElementById("name").value == "") {
+                    alert("please tell us your name");
+                    document.getElementById("name").focus();
+                }
+                else if (document.getElementById("email").value == "") {
+                    alert("please tell us your email");
+                    document.getElementById("email").focus();
+                }
+                 else if (document.getElementById("phone").value == "") {
+                    alert("please tell us your phone number");
+                    document.getElementById("phone").focus();
+                }
+                else {
+                    return true;
+                }
+                return false;
+            }
 
+</script>
 <body>
     <h1> <span>
             <i> Jaila's
@@ -172,8 +199,10 @@
         <div
             class="subnav">
             <button
-                class="subnavbtn">Complexion
-                Apparel
+                class="subnavbtn"><a
+                    href="complexionapparel1.htm">Complexion
+                    Apparel
+                </a>
                 <i
                     class="fa fa-caret-down"></i></button>
             <div
@@ -196,7 +225,10 @@
             class="subnav">
             <button
                 class="subnavbtn">
-                Travel
+                <a
+                    href="travel.html">
+                    Travel
+                </a>
                 <i
                     class="fa fa-caret-down"></i></button>
             <div
@@ -217,7 +249,10 @@
             class="subnav">
             <button
                 class="subnavbtn">
-                Lifestyle
+                <a
+                    href="lifestyle.html">
+                    Lifestyle
+                </a>
                 <i
                     class="fa fa-caret-down"></i></button>
             <div
@@ -232,6 +267,8 @@
         </div>
         <a
             href="contact.html">Contact</a>
+         <a
+          href="credits.htm">Credits</a>
     </div>
   
         <p
@@ -245,8 +282,8 @@
                 </p>
 
 <form
-    action="mailer.php"
-    method="post">
+    action="http://wtspring13sec2.babson.edu/gordon/mailer.php"
+    method="post" onsubmit="return processForm()">
     <fieldset>
         <legend style="margin-left: 45px; font-family: 'bodytext-1';">
             Contact
@@ -257,14 +294,16 @@
             <tbody>
                 <tr>
                     <td
-                        class="ar">
+                        class="ar"
+                       >
                         Your
                         Name:
                     </td>
                     <td><input
                             type="text"
                             name="YourName"
-                            size="30">
+                            size="30"
+                             id="name">
                     </td>
                 </tr>
                 <tr>
@@ -276,7 +315,8 @@
                     <td><input
                             type="text"
                             name="email"
-                            size="30">
+                            size="30"
+                            id="email">
                     </td>
                 </tr>
                 <tr>
@@ -287,7 +327,8 @@
                     <td><input
                             type="text"
                             name="phone"
-                            size="30">
+                            size="30"
+                            id="phone">
                     </td>
                 </tr>
                 <tr>
