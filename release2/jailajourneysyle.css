@@ -1,0 +1,32 @@
+ @font-face {
+            font-family: 'Script-1';
+            src: url(Amsterdam\ Personal\ Use.ttf)
+        }
+
+        @font-face {
+            font-family: 'bodytext-1';
+            src: url(breadley-sans-font/BreadleySansRegular-MVyEB.ttf)
+            
+        }
+     body{background-color:rgb(236,238,222)}
+
+        h1 {text-align: center;
+            font-family: 'Script-1';
+            font-size: 30pt;
+            font-weight: 300;
+            margin: auto;
+            margin-top: 20pt;
+            color: rgb(138,161,197);}
+
+    p {font-family: 'Times New Roman', Times, serif; font-size: 16pt; text-align: center;}
+    a:link {
+  color: #CBB99B;
+  background-color: transparent;
+  text-decoration: none;}
+
+            a:visited {
+  color:#CBB99B;
+  background-color: transparent;
+  text-decoration: none;
+}
+
