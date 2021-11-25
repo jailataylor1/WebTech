@@ -35,6 +35,15 @@
         <link rel="icon"
             sizes="128x128"
             href="complexion logo w brown.png" />
+            <script
+                src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("#flip").click(function () {
+                        $("#panel").slideToggle("slow");
+                    });
+                });
+            </script>
     <style>
         @font-face {
             font-family: 'Script-1';
@@ -205,12 +214,20 @@
     top: 0; right: 0;
     bottom: 0; left: 0;
     margin: auto; margin-bottom: 10px;}
+
+    #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(236, 238, 222);
+  border: solid 1px rgb(182,215,168);
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
     </style>
-        <script
-            src="https://code.jquery.com/jquery.min.js"></script>
-        <script>
-           
-            </script>
+       
 
 <body>
     <h1> <span>
@@ -218,7 +235,11 @@
                 Journey</i>
         </span>
     </h1>
-
+    <div id="flip">Click
+        to Learn More About Me!
+    </div>
+    <div id="panel">
+       
     <div
         class="navbar">
         <a
@@ -291,6 +312,7 @@
             href="contact.html">Contact</a>
             <a
                 href="credits.htm">Credits</a>
+    </div>
     </div>
     <div
         class="hero-image">
