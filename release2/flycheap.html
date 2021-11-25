@@ -200,6 +200,16 @@
 }
 .dontwrapdiv {overflow:hidden;} 
     </style>
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#travel").append(" <b>Prauge, Czech Republic!</b>.");
+            });
+
+        });
+    </script>
 
 <body>
     <h1> <span>
@@ -325,6 +335,9 @@ The cheapest flight you can book is free, and the easiest way to do that is with
 
 You can sign up for an airline rewards card that earns points with almost all of our Favorite airlines, or a more general travel rewards card that lets you redeem points across a variety of airlines. As a beginner card, we recommend the Chase Sapphire Preferred Card. You can earn up to 60,000 in bonus points after spending $4,000 in the first 3 months after your account opening. That's worth $750 when redeemed through Chase Ultimate Rewards, and more than enough for an international flight. 
 </p>
+
+<p id="travel"> Click<button id="btn1" style="background-color: transparent; border: none; font-size: 16pt"> here </button>for the place I'm travling to next!</p>
+
 
 
 
