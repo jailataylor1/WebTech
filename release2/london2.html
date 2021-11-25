@@ -217,6 +217,12 @@
                     $("tr:even").show();
                     $("tr:odd").css("background-color", "rgb(182,215,168)");
                 })
+                	$("p").mouseover(function () {
+                    $(this).css("border", "3px dotted green")
+                })
+                $("p").mouseout(function () {
+                    $(this).css("border", "none")
+                })
 
             });
             </script>
