@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+    <meta
+        charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes" />
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black" />
+    <meta
+        name="mobile-web-app-capable"
+        content="yes" />
+	<title>Page 2 Mobile</title>
+
+	<style>
+	/* Your styles go here */
+	img {width:150px; height:100px; margin-left:0px}
+	p {text-align:center}
+    #p1 {width:150px; height:150px; background-color:azure; border:2px solid red}
+	button {margin:23px}
+	</style>
+	
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script>
+	$(function(){
+	   // jQuery methods go here...
+		$(document).ready(function () {
+			$("#elephantimg").load(function () {
+				$("#elephantimg").animate({ marginLeft: "+=300px" }, 3000);
+				$("#elephantimg").delay(2000).animate({ marginLeft: "-=300px" }, 3000);
+			});
+		});
+
+		$("#button1").click(() => {
+			$("#button1").fadeOut(3000);
+			$("#p1").animate({ width: "300px" }, 3000);
+		});
+		$("#button2").click(() => {
+			$("#button2").fadeOut(3000);
+			$("#p1").delay(3000).animate({ height: "300px" }, 3000);
+		});
+
+	});
+	/* Your additional JavaScript goes here */
+	 // <![CDATA[
+		var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+		if (mobile) {
+			document.location = "page2mobile.htm"
+		}
+  // ]]>
+	</script>
+  </head>
+
+  <body>
+ <p>This is a Mobile Page</p>
+  <p><a href="index.htm">return home</a></p>
+  </body>
+</html>
