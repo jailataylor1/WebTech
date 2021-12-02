@@ -13,7 +13,7 @@
 	img {width:80px; margin-top:30px}
 	p, li {font-size:18pt}
 
-	@media screen and (max-width: 480px) {
+	@media handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
       	img {width:40%}
     	ul {text-align:left}
     	li {display:block; margin-left:20px}
@@ -21,7 +21,9 @@
       	h1 {text-align: center; color: indigo;}
   }
 	</style>
-    
+    <script>
+			
+	</script>
   </head>
 
   <body>
